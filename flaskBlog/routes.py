@@ -9,3 +9,10 @@ def home():
 @app.route("/about")
 def about():
     return render_template('about.html')    
+
+
+@app.route("/get-all-users", methods=["GET"])
+def get_all_users():
+    return {
+        "users":"[fahad, ammad, asad]"
+    }    
